@@ -1,0 +1,11 @@
+Задание 2. match + эмодзи: Иконки типов контента
+
+  Функция getContentTypeIcon(string $type): string возвращает эмодзи:
+
+      'article' → 📄
+      'video' → 🎬
+      'audio' → 🎵
+      'image' → 🖼️
+      default → 📦
+
+  Сгенерируй HTML-список из 5 элементов разных типов, каждый с иконкой.
