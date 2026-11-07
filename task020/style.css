@@ -1,0 +1,20 @@
+.message {
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.pending {
+  background: grey;
+}
+.processing {
+  background: blue;
+}
+.shipped {
+  background: green;
+}
+.delivered {
+  background: rgb(0, 72, 0);
+}
+.unknown {
+  background: red;
+}
