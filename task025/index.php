@@ -1,0 +1,21 @@
+<?php
+  if (isset($_POST['username'])) {
+    $username = htmlspecialchars($_POST['username']);
+    echo "Hi, $username";
+  }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POST: Simple POST</title>
+</head>
+<body>
+  <form action="" method="POST">
+    <input type="text" name="username">
+    <button>Send</button>
+  </form>
+</body>
+</html>
