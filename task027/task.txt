@@ -1,0 +1,5 @@
+Задание 6. Select с выбором страны
+
+  Форма с <select> и тремя <option>: Russia, USA, Germany. 
+  Метод POST. 
+  PHP выводит "Вы выбрали: {country}".
