@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filter products by category and price</title>
+</head>
+<body>
+  <form class="filter">
+      <label for="category">Категория:</label>
+      <select id="category" name="category">
+          <option value="all">all</option>
+          <option value="books">books</option>
+          <option value="electronics">electronics</option>
+          <option value="clothing">clothing</option>
+          <option value="home">Home</option>
+          <option value="sports">sports</option>
+      </select>
+
+      <input type="number" id="min-price" name="min-price" placeholder="мин. цена" min="0">
+      <input type="number" id="max-price" name="max-price" placeholder="макс. цена" min="0">
+
+      <button id="show-btn" type="submit">Показать</button>
+  </form>
+
+  <ul id="products"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
