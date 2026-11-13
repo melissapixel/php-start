@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact form with client-side validation</title>
+</head>
+<body>
+  <form action="" method="POST">
+    <div>
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+    </div>
+
+    <div>
+      <label for="message">Сообщение:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+    </div>
+
+    <button type="submit">Отправить</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
