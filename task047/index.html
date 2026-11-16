@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator with processing</title>
+</head>
+<body>
+
+  <form class="calculator-form" id="calcForm">
+    <div class="input-group">
+      <input type="text" id="num1" placeholder="Число 1" required>
+      
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      
+      <input type="text" id="num2" placeholder="Число 2" required>
+    </div>
+
+    <button type="submit">Вычислить</button>
+    
+    <div class="result" id="result"></div>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
