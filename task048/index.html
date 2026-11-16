@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Currency converter</title>
+</head>
+<body>
+  <form id="form">
+    <label for="amount">Сумма:</label>
+    <input type="number" id="amount" name="amount" step="any" required>
+
+    <label for="from_currency">Из валюты:</label>
+    <select id="from_currency" name="from_currency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="RUB">RUB</option>
+    </select>
+
+    <label for="to_currency">В валюту:</label>
+    <select id="to_currency" name="to_currency">
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="RUB">RUB</option>
+    </select>
+
+    <button type="submit">Рассчитать</button>
+
+    <p class="result"></p>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
