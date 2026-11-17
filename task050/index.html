@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple shopping list</title>
+</head>
+<body>
+  <form action="" method="POST">
+    <div>
+      <label for="item_name">Item Name:</label>
+      <input 
+        type="text" 
+        id="item_name" 
+        name="item_name" 
+        placeholder="e.g., Wireless Mouse" 
+        required
+      >
+    </div>
+
+    <div>
+      <label for="quantity">Quantity:</label>
+      <input 
+        type="number" 
+        id="quantity" 
+        name="quantity" 
+        min="1" 
+        step="1" 
+        value="1" 
+        required
+      >
+    </div>
+
+    <button type="submit">Add Item</button>
+
+    <p class="result"></p>
+  </form>
+
+  <ul class="list"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

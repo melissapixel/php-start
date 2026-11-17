@@ -1,0 +1,13 @@
+Задание 3: Простой список покупок
+Требования:
+
+    БД: Таблица shopping_list с полями id, item_name, quantity (INT).
+    PHP:
+        add_item.php: принимает POST item_name, quantity. Валидирует (название не пустое, quantity > 0). Возвращает JSON: success, id (нового товара), error.
+        delete_item.php: принимает POST id. Валидирует (id существует). Возвращает JSON: success, error.
+        get_items.php: возвращает все товары в JSON: success, items (array), error.
+    HTML: Поле ввода "Название", поле "Количество", кнопка "Добавить", список товаров с кнопками "Удалить".
+    JS:
+        При добавлении — отправляет на add_item.php, добавляет товар в список без перезагрузки.
+        При удалении — отправляет на delete_item.php, удаляет из DOM.
+        При загрузке страницы — загружает список через get_items.php.
