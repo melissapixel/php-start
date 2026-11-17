@@ -2,7 +2,7 @@
 require_once '/app/db.php';
 header('Content-Type: application/json');
 
-$username = trim($_GET['username'] ?? ''), ENT_QUOTES, 'UTF-8';
+$username = trim($_GET['username'] ?? '');
 
 if (mb_strlen($username) < 3) {
   http_response_code(400);
