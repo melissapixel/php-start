@@ -1,0 +1,23 @@
+Задание 1: Фильтрация и сортировка (WHERE, AND/OR, ORDER BY, LIMIT, BETWEEN, IN)
+
+Цель: научиться фильтровать и сортировать данные.
+БД: Таблица products (id, name, price DECIMAL(10,2), category, stock INT, created_at). Заполни 20-30 товаров разных категорий и цен.
+PHP (products.php):
+Принимает GET-параметры (все опциональные):
+
+    category — точное совпадение
+    min_price, max_price — диапазон цен (BETWEEN)
+    in_stock — если "1", то только товары со stock > 0
+    sort_by — "price" или "name" (по умолчанию "price")
+    order — "asc" или "desc" (по умолчанию "asc")
+    limit — количество (по умолчанию 10, максимум 100)
+
+SQL-концепции для отработки:
+
+    WHERE category = ? AND price BETWEEN ? AND ? AND stock > 0
+    ORDER BY price ASC
+    LIMIT 10
+    Динамическая сборка запроса (добавляешь условия только если параметры переданы)
+
+JS: Форма с фильтрами, таблица результатов.
+Edge-кейсы: невалидный sort_by (защита от инъекций через whitelist!), limit больше 100, пустой результат.
