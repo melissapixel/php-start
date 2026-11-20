@@ -1,0 +1,35 @@
+Задание 1: Каталог сотрудников компании
+
+  Цель: отработать фильтры по строкам, числам, датам и спискам значений.
+  БД: Таблица employees (id, first_name, last_name, department, position, salary DECIMAL(10,2), hire_date DATE, is_active TINYINT). Заполни 30-40 сотрудников разных отделов (IT, HR, Sales, Marketing, Finance), с разными зарплатами и датами найма.
+  PHP (employees.php):
+Принимает GET-параметры (все опциональные):
+
+    department — точное совпадение
+    departments — массив отделов (фильтр "ИЛИ": IN ('IT', 'HR'))
+    min_salary, max_salary — диапазон зарплат
+    hire_from, hire_to — диапазон дат найма
+    is_active — "1" только активные, "0" только уволенные
+    search — поиск по имени или фамилии (LIKE '%?%')
+    sort_by — "salary", "hire_date", "last_name" (по умолчанию "hire_date")
+    order — "asc" или "desc"
+    page, per_page — пагинация (по умолчанию 1 и 10)
+
+SQL-концепции для отработки:
+
+    WHERE department = ? AND salary BETWEEN ? AND ?
+    WHERE department IN (?, ?, ?)
+    WHERE first_name LIKE ? OR last_name LIKE ?
+    WHERE hire_date BETWEEN ? AND ?
+    ORDER BY ? ? — через whitelist!
+    LIMIT ? OFFSET ? — для пагинации
+
+JS: Форма с фильтрами, таблица результатов, кнопки пагинации.
+Edge-кейсы:
+
+    sort_by не из whitelist → дефолт
+    per_page > 100 → принудительно 100
+    page отрицательный → принудительно 1
+    search содержит спецсимволы LIKE (%, _) — их нужно экранировать!
+    departments — массив, нужно валидировать каждый элемент
+
