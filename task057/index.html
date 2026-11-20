@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/submit" method="POST">
+    <div>
+      <label for="min_orders">Минимальное количество заказов *</label>
+      <input 
+        type="number" 
+        id="min_orders" 
+        name="min_orders" 
+        min="1" 
+        step="1" 
+        required 
+        placeholder="Например: 3"
+      >
+    </div>
+
+    <div>
+      <label for="min_total">Минимальная общая сумма заказов</label>
+      <input 
+        type="number" 
+        id="min_total" 
+        name="min_total" 
+        min="0" 
+        step="0.01" 
+        placeholder="Например: 1500.00"
+      >
+    </div>
+
+    <button type="submit">Сохранить</button>
+  </form>
+</body>
+</html>
