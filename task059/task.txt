@@ -1,0 +1,26 @@
+Задание 1: Работа с NULL в одной таблице
+
+Цель: понять, что такое NULL и как с ним работать в SQL и PHP.
+БД: Таблица employees (id, name, position, phone, email). Заполни 10 сотрудников, но:
+
+    У 3-х нет телефона (phone = NULL)
+    У 2-х нет email (email = NULL)
+    У 1-го нет ни телефона, ни email
+
+PHP (employees.php):
+Принимает GET-параметр filter:
+
+    "no_phone" — сотрудники без телефона
+    "no_email" — сотрудники без email
+    "no_contact" — у кого нет ни телефона, ни email
+    "all" — все (по умолчанию)
+
+SQL-концепции для отработки:
+
+    WHERE phone IS NULL (НЕ = NULL — это не работает!)
+    WHERE phone IS NULL AND email IS NULL
+    COALESCE(phone, email, 'не указан') — вернуть первое НЕ-NULL значение
+    IFNULL(phone, 'не указан') — если NULL, подставить значение
+
+JS: Таблица сотрудников, где вместо пустых ячеек — "не указан".
+Edge-кейсы: невалидный filter, пустой результат.
