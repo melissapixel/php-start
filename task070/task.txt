@@ -1,0 +1,21 @@
+ЗАДАНИЕ 1: Список задач (Todo List) с REST API
+
+  Требования:
+
+      Создай таблицу tasks в БД: id (INT, AUTO_INCREMENT), title (VARCHAR 255), completed (BOOLEAN, default 0), created_at (TIMESTAMP).
+
+      HTML/JS: Страница со списком задач и формой добавления новой задачи.
+
+      PHP API endpoints:
+          GET /api/tasks.php — возвращает JSON со всеми задачами.
+          POST /api/tasks.php — создает новую задачу (принимает JSON с полем title).
+          DELETE /api/tasks.php?id={id} — удаляет задачу по ID.
+          
+      JS: Используй fetch() для отправки запросов. При добавлении/удалении задачи обновляй список без перезагрузки страницы.
+
+  Что проверить:
+
+      Корректная работа с разными HTTP-методами.
+      Валидация входных данных в PHP.
+      Использование prepared statements в PDO.
+      Обработка ошибок (400, 404, 500).
