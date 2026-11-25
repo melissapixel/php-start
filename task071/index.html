@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Searching for users with filtering</title>
+</head>
+<body>
+  <!-- Форма поиска -->
+  <form id="searchForm" class="search-form">
+    <div class="form-group">
+      <label for="nameInput">Имя:</label>
+      <input type="text" id="nameInput" name="name" placeholder="Введите имя...">
+    </div>
+
+    <div class="form-group">
+      <label for="citySelect">Город:</label>
+      <select id="citySelect" name="city">
+        <option value="">Все города</option>
+        <option value="Москва">Москва</option>
+        <option value="Санкт-Петербург">Санкт-Петербург</option>
+        <option value="Казань">Казань</option>
+        <option value="Новосибирск">Новосибирск</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="minAgeInput">Минимальный возраст:</label>
+      <input type="number" id="minAgeInput" name="minAge" min="0" max="120" placeholder="От...">
+    </div>
+
+    <button type="submit">Найти</button>
+    <button type="reset">Сбросить</button>
+  </form>
+
+  <!-- Блок для вывода результатов -->
+  <ul id="resultsList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
