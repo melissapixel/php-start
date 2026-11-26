@@ -1,0 +1,8 @@
+.theme--dark {
+  background: #000;
+  color: aliceblue;
+}
+.theme--light {
+  background: #ffffff;
+  color: rgb(1, 1, 1);
+}
